@@ -611,9 +611,768 @@
                 <div class="media-card">
                     <img src="sanguche.jpeg" alt="Pipón Branding">
                 </div>
+                <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="favicon2.png">
+    <title>Nazarena Ibarrola — Diseñadora Gráfica & Marketing Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --crema: #FFF5E4;
+            --verde: #C3DC9F;
+            --rosa: #FFC3C4;
+            --amarillo: #FECA73;
+            --oscuro: #2D362C;
+            --gris: #646E62;
+            --blanco: #FFFFFF;
+            --borde-suave: rgba(45, 54, 44, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--crema);
+            color: var(--oscuro);
+            line-height: 1.5;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .project-client-name, .section-title {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            color: var(--oscuro);
+        }
+
+        img, video {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background-color: rgba(255, 245, 228, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--borde-suave);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem;
+            color: var(--oscuro);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: none;
+            gap: 20px;
+        }
+        .nav-links a {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--gris);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--oscuro);
+        }
+        
+        /* Menú hamburguesa mobile */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--oscuro);
+            transition: 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 57px; left: 0; width: 100%;
+            background: var(--crema);
+            border-bottom: 1px solid var(--borde-suave);
+            padding: 20px;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        .mobile-menu a {
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--oscuro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            padding: 100px 0 50px 0;
+        }
+        .hero-title-area {
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 10vw, 48px);
+            line-height: 1.1;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .hero-subtitle {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gris);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* Hero Visual Grid */
+        .hero-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .hero-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--blanco);
+            box-shadow: 0 8px 24px rgba(45, 54, 44, 0.04);
+            aspect-ratio: 4/5;
+        }
+        .hero-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- SERVICIOS --- */
+        .services-section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .service-card {
+            border-radius: 20px;
+            padding: 24px;
+        }
+        .service-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            color: var(--oscuro);
+        }
+        .service-card p {
+            font-size: 14px;
+            color: var(--gris);
+            line-height: 1.4;
+        }
+
+        /* --- HERRAMIENTAS & IA --- */
+        .tools-section {
+            padding: 20px 0 60px 0;
+        }
+        .tools-container {
+            background: var(--blanco);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(45, 54, 44, 0.04);
+        }
+        .tools-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gris);
+            margin-bottom: 16px;
+        }
+        .tools-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .tool-chip {
+            background: rgba(195, 220, 159, 0.25);
+            padding: 8px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--oscuro);
+        }
+        .tool-chip.ai-chip {
+            background: rgba(254, 202, 115, 0.3);
+        }
+
+        /* --- PROYECTOS --- */
+        .projects-section {
+            padding: 60px 0;
+        }
+        .project-item {
+            margin-bottom: 60px;
+        }
+        .project-header {
+            margin-bottom: 16px;
+        }
+        .project-client-name {
+            font-size: 30px;
+            margin-bottom: 4px;
+        }
+        .project-categories {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gris);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .project-description {
+            font-size: 16px;
+            color: var(--oscuro);
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        .project-media-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .media-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--blanco);
+            box-shadow: 0 8px 24px rgba(45, 54, 44, 0.04);
+        }
+        .video-wrapper-916 {
+            position: relative;
+            width: 100%;
+            padding-top: 177.77%;
+            background: #111;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .video-wrapper-916 video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+        .play-indicator {
+            position: absolute;
+            bottom: 15px; right: 15px;
+            background: var(--amarillo);
+            color: var(--oscuro);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* --- EXPERIENCIA --- */
+        .experience-section {
+            padding: 60px 0;
+        }
+        .exp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .exp-item {
+            background: var(--blanco);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(45, 54, 44, 0.04);
+        }
+        .exp-company {
+            font-size: 18px;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 2px;
+        }
+        .exp-role {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--oscuro);
+        }
+        .exp-date {
+            font-size: 13px;
+            color: var(--gris);
+            margin-bottom: 12px;
+        }
+        .exp-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .exp-bullets li {
+            font-size: 14px;
+            color: var(--gris);
+            position: relative;
+            padding-left: 14px;
+        }
+        .exp-bullets li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: var(--oscuro);
+            font-weight: bold;
+        }
+
+        /* --- BACKSTAGE / DETRÁS DEL CONTENIDO --- */
+        .backstage-section {
+            padding: 60px 0;
+        }
+        .backstage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .backstage-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #111;
+        }
+        .backstage-tag {
+            position: absolute;
+            top: 10px; left: 10px;
+            background: rgba(255, 245, 228, 0.9);
+            color: var(--oscuro);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 8px;
+            letter-spacing: 0.5px;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        /* --- CONTACTO / FOOTER --- */
+        .footer-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--oscuro);
+            color: var(--crema);
+        }
+        .footer-section h2 {
+            color: var(--crema);
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        .footer-section p {
+            font-size: 16px;
+            color: #d1d9d0;
+            margin-bottom: 24px;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--amarillo);
+            color: var(--oscuro);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            min-height: 44px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(254, 202, 115, 0.2);
+            transition: transform 0.2s;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .footer-links a {
+            color: var(--crema);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* --- MODAL VIDEO 9:16 --- */
+        #videoModal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(45, 54, 44, 0.92);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+            max-height: 85vh;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .modal-content video {
+            width: 100%;
+            max-height: 80vh;
+            display: block;
+        }
+        .close-modal {
+            position: absolute;
+            top: 12px; right: 12px;
+            background: var(--rosa);
+            color: var(--oscuro);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- MEDIA QUERIES (TABLET Y DESKTOP) --- */
+        @media (min-width: 768px) {
+            .container { padding: 0 30px; }
+            .nav-links { display: flex; }
+            .hamburger { display: none; }
+            .mobile-menu { display: none !important; }
+            
+            .hero { padding: 140px 0 80px 0; }
+            .hero-title-area { max-width: 600px; margin-bottom: 40px; }
+            .hero h1 { font-size: 64px; }
+            .hero-visual-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+            
+            .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .project-media-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .backstage-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+            
+            .exp-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+    </style>
+</head>
+<body id="inicio">
+
+    <!-- NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="nav-logo">Nazarena Ibarrola</a>
+            <nav class="nav-links">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#backstage">Backstage</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ MOBILE DESPLEGABLE -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+        <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+        <a href="#experiencia" onclick="toggleMenu()">Experiencia</a>
+        <a href="#backstage" onclick="toggleMenu()">Backstage</a>
+        <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero container">
+        <div class="hero-title-area">
+            <h1>NAZARENA IBARROLA</h1>
+            <p class="hero-subtitle">Diseño gráfico · Creacion de Contenido · Marketing Digital</p>
+        </div>
+        <div class="hero-visual-grid">
+            <div class="hero-card">
+                <img src="yo2.jpeg" alt="Portfolio 1">
+            </div>
+            <div class="hero-card">
+                <img src="yo.png" alt="Portfolio 2">
+            </div>
+            <div class="hero-card">
+                <img src="back.jpeg" alt="Portafolio 3">
+                    </div>
+            <div class="hero-card">
+                <img src="yo3.png" alt="Portfolio 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="services-section container">
+        <h2 class="section-title">SERVICIOS</h2>
+        <div class="services-grid">
+            <div class="service-card" style="background-color: var(--verde);">
+                <h3>DISEÑO</h3>
+                <p>Identidad visual · piezas gráficas · packaging</p>
+            </div>
+            <div class="service-card" style="background-color: var(--rosa);">
+                <h3>CONTENIDO</h3>
+                <p>Reels · historias · fotografía · edición</p>
+            </div>
+            <div class="service-card" style="background-color: var(--amarillo);">
+                <h3>REDES</h3>
+                <p>Planificación · estrategia · community management</p>
+            </div>
+            <div class="service-card" style="background-color: var(--blanco);">
+                <h3>DIGITAL</h3>
+                <p>E-commerce · campañas · IA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERRAMIENTAS & IA -->
+    <section class="tools-section container">
+        <div class="tools-container">
+            <div class="tools-title">Herramientas & Habilidades</div>
+            <div class="tools-tags">
+                <span class="tool-chip">Illustrator</span>
+                <span class="tool-chip">Photoshop</span>
+                <span class="tool-chip">Lightroom</span>
+                <span class="tool-chip">Canva</span>
+                <span class="tool-chip">CapCut</span>
+                <span class="tool-chip">Meta Business Suite</span>
+                <span class="tool-chip ai-chip">IA (Generación de recursos · asistencia creativa · edición · contenido)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects-section container">
+        <h2 class="section-title">PROYECTOS</h2>
+
+        <!-- PIPÓN -->
+        <article class="project-item">
+            <div class="project-header">
+                <h3 class="project-client-name">PIPÓN</h3>
+                <div class="project-categories">Branding · Packaging · Social Media · Contenido</div>
+                <p class="project-description">Identidad visual y contenido para una marca de comida al paso.</p>
+            </div>
+            <div class="project-media-grid">
+                <div class="media-card">
+                    <img src="sanguche.jpeg" alt="Pipón Branding">
+                </div>
                 <div class="pipon.mp4" onclick="openModal('https://www.w3schools.com/html/mov_bbb.mp4')">
                     <video autoplay loop muted playsinline><source src="pipon.mp4"></video>
                     <div class="play-indicator">▶ Reproducir</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- INKSPIRA -->
+        <article class="project-item">
+            <div class="project-header">
+                <h3 class="project-client-name">INKSPIRA</h3>
+                <div class="project-categories">Branding · Producto · Contenido · Fotografía</div>
+                <p class="project-description">Mi propio proyecto de diseño, producto y comunicación.</p>
+            </div>
+            <div class="project-media-grid">
+                <div class="media-card">
+                    <img src="letiinksp.png" alt="Inkspira Producto">
+                </div>
+                <div class="media-card video-wrapper-916" onclick="openModal('inkspira2.mp4')">
+                    <video autoplay loop muted playsinline><source src="inkspira2.mp4" type="video/mp4"></video>
+                    <div class="play-indicator">▶ Reproducir</div>
+                </div>
+            </div>
+        </article>
+
+        <!-- MODASHOP -->
+        <article class="project-item">
+            <div class="project-header">
+                <h3 class="project-client-name">MODASHOP</h3>
+                <div class="project-categories">E-commerce · Marketing · Social Media · Contenido</div>
+                <p class="project-description">Marketing, contenido y comunicación para una marca de moda.</p>
+            </div>
+            <div class="project-media-grid">
+                <div class="media-card video-wrapper-916" onclick="openModal('backstage.mp4')">
+    <video autoplay loop muted playsinline>
+        <source src="backstage.mp4" type="video/mp4">
+    </video>
+    <div class="play-indicator">▶ Reproducir</div>
+</div>
+                <div class="media-card">
+                    <img src="school.png" alt="Modashop Campaña">
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="experience-section container">
+        <h2 class="section-title">EXPERIENCIA</h2>
+        <div class="exp-list">
+            <div class="exp-item">
+                <div class="exp-company">Modashop</div>
+                <div class="exp-role">Community Manager & E-commerce</div>
+                <div class="exp-date">2024 — Presente</div>
+                <ul class="exp-bullets">
+                    <li>Gestión integral de redes sociales y campañas de marketing.</li>
+                    <li>Producción de contenido audiovisual vertical para lanzamientos.</li>
+                    <li>Mantenimiento operativo y comercial de e-commerce.</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <div class="exp-company">Inkspira</div>
+                <div class="exp-role">Fundadora & Diseñadora Gráfica</div>
+                <div class="exp-date">2023 — Presente</div>
+                <ul class="exp-bullets">
+                    <li>Desarrollo de identidad visual corporativa y de producto.</li>
+                    <li>Producción física de papelería, papelería fina y packaging.</li>
+                    <li>Estrategia de comunicación visual y fotografía comercial.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETRÁS DEL CONTENIDO -->
+    <section id="backstage" class="backstage-section container">
+        <h2 class="section-title">BACKSTAGE</h2>
+        <div class="backstage-grid">
+            <div class="backstage-card video-wrapper-916" onclick="openModal('backtosch.mp4')">
+                <span class="backstage-tag">Modashop</span>
+                <video autoplay loop muted playsinline><source src="backtosch.mp4" type="video/mp4"></video>
+                <div class="play-indicator">▶</div>
+            </div>
+            <div class="backstage-card video-wrapper-916" onclick="openModal('inkspira.mp4')">
+                <span class="backstage-tag">Inkspira</span>
+                <video autoplay loop muted playsinline><source src="inkspira.mp4" type="video/mp4"></video>
+                <div class="play-indicator">▶</div>
+            </div>
+            <div class="backstage-card video-wrapper-916" onclick="openModal('feria.mp4')">
+                <span class="backstage-tag">Feria colab</span>
+                <video autoplay loop muted playsinline><source src="feria.mp4" type="video/mp4"></video>
+                <div class="play-indicator">▶</div>
+            </div>
+            <div class="backstage-card video-wrapper-916" onclick="openModal('tendens.mp4')">
+                <span class="backstage-tag">Tendens</span>
+                <video autoplay loop muted playsinline><source src="tendens.mp4" type="video/mp4"></video>
+                <div class="play-indicator">▶</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <footer id="contacto" class="footer-section">
+        <div class="container">
+            <h2>Charlemos juntos</h2>
+            <p>Disponible para empresas y proyectos independientes. Desde Concordia, Entre Ríos.</p>
+            <a href="https://wa.me/93454263127" target="_blank" class="btn-whatsapp">Escribime por WhatsApp ↗</a>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/nazaibarrola/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/nazarena-agostina-ibarrola" target="_blank">LinkedIn</a>
+                <a href="mailto:nazarena.ibarrola@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL VERTICAL PARA VIDEOS -->
+    <div id="videoModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <video id="modalVideoPlayer" controls autoplay playsinline>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        function openModal(videoSrc) {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('modalVideoPlayer');
+            player.src = videoSrc;
+            modal.style.display = 'flex';
+            player.play();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const player = document.getElementById('modalVideoPlayer');
+            player.pause();
+            player.src = "";
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
                 </div>
             </div>
         </article>
