@@ -296,7 +296,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 12px;
-            margin-top: 16px;
+            margin-top: 12px;
         }
         .media-card {
             border-radius: 20px;
@@ -304,6 +304,7 @@
             background: var(--blanco);
             box-shadow: 0 8px 24px rgba(45, 54, 44, 0.04);
         }
+
         .video-wrapper-916 {
             position: relative;
             width: 100%;
@@ -342,7 +343,6 @@
             margin-top: 24px;
         }
         
-        /* Animación interactiva aplicada a las tarjetas de experiencia */
         .exp-item {
             background: var(--blanco);
             padding: 24px;
@@ -521,7 +521,7 @@
             .hero-visual-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
             
             .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .project-media-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .project-media-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
             .backstage-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
             
             .exp-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -622,20 +622,15 @@
     <section id="proyectos" class="projects-section container">
         <h2 class="section-title">PROYECTOS</h2>
 
+        <!-- PIPÓN: Actualizado con la placa horizontal de identidad de marca -->
         <article class="project-item">
             <div class="project-header">
                 <h3 class="project-client-name">PIPÓN</h3>
-                <div class="project-categories">Branding · Contenido · Redes sociales · Gestión de marca</div>
-                <p class="project-description">Marca de comida al paso desarrollada y gestionada desde cero, desde la identidad visual hasta el contenido, las redes y las acciones comerciales.</p>
+                <div class="project-categories">Branding · Isologo · Contenido · Redes sociales</div>
+                <p class="project-description">Marca de comida al paso desarrollada y gestionada desde cero, desde la identidad visual y el isologo hasta el contenido, las redes y las acciones comerciales.</p>
             </div>
-            <div class="project-media-grid">
-                <div class="media-card">
-                    <img src="sanguche.jpeg" alt="Pipón Branding">
-                </div>
-                <div class="media-card video-wrapper-916" onclick="openModal('pipon.mp4')">
-                    <video autoplay loop muted playsinline><source src="pipon.mp4" type="video/mp4"></video>
-                    <div class="play-indicator">▶ Reproducir</div>
-                </div>
+            <div class="media-card">
+                <img src="Identidad de marca Pipon.png" alt="Pipón Identidad de Marca">
             </div>
         </article>
 
